@@ -47,6 +47,15 @@
     <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
 
     <script>
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function() {
+                  console.log('Service Worker Registered');
+            });
+        }
+    </script>
+
+    <script>
         // Your web app's Firebase configuration
         var firebaseConfig = {
             apiKey: "AIzaSyBAU2f-vcC1C--rfBX3GoYHi7vOzkzCLIQ",

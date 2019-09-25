@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Motiv Cleaner</title>
+
+    <link type="text/css" rel="stylesheet" href="css/index.css" media="all"></link>
+
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+
+
+</head>
+<body>
+
+    <div class="main">
+
+        <div id="register">
+            <h6 id="message"></h6>
+            <form name="register">
+                <input type="text" name="fullName" placeholder="Full Name">
+                <input type="text" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="confirmPassword" placeholder="Confirm Password">
+                <button name="registerUser" type="button" class="regButton">Register</button>
+            </form>
+            <p id="registerToLogin" class="loginRegister">Already have an account?</p>
+        </div>
+
+        <div id="login">
+            <h6 id="message"></h6>
+            <form name="login">
+                <input type="text" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <button name="loginUser" type="button" class="regButton">Login</button>
+            </form>
+            <p id="loginToRegister" class="loginRegister">Don't have an account?</p>
+        </div>
+
+    </div>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-firestore.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBAU2f-vcC1C--rfBX3GoYHi7vOzkzCLIQ",
+            authDomain: "motiv-cleaner.firebaseapp.com",
+            databaseURL: "https://motiv-cleaner.firebaseio.com",
+            projectId: "motiv-cleaner",
+            storageBucket: "",
+            messagingSenderId: "441667874568",
+            appId: "1:441667874568:web:c8b8fcd4584d378b"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Get a reference to the database service
+        var database = firebase.database();
+
+    </script>
+
+    
+    <script src="js/index.js"></script>
+    
+</body>
+</html>

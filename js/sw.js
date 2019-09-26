@@ -2,7 +2,8 @@ var cacheName = 'Motiv Cleaner';
 var filesToCache = [
   '/',
   '/index.html',
-  '/index.css'
+  'css/index.css',
+  'js/index.js'
 ];self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
   e.waitUntil(

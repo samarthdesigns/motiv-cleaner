@@ -1,16 +1,71 @@
+
 body{
-    padding: 0px;
-    margin: 0px;
+    margin:0px;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
 
+#camera, #camera--view, #camera--sensor, #camera--output{
+    position: absolute;
+    height: 91vh;
+    border: none;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.home-holder{
+    padding-top: 5vh;
+    padding-bottom: 30vh;
+    z-index: -1;
+    display: none;
+}
+
+.home-holder img{
+    min-width: 150px;
+    width: 80%;
+    height: auto;
+    max-width: 600px;
+    object-fit: cover;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+#camera{
+    
+}
+
+#camera--view, #camera--sensor, #camera--output{
+    transform: scaleX(-1);
+    filter: FlipH;
+}
+
+.taken{
+    height: 100px!important;
+    width: 100px!important;
+    transition: all 0.5s ease-in;
+    border: solid 3px white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
 #message{
     color: red;
     margin-bottom: 30px;
     text-align: center;
+}
+
+.leader{
+    display: none;
+    padding-top: 9vh;
 }
 
 input, button{
@@ -90,6 +145,8 @@ input[type="password"]{
     -moz-box-shadow: 0px -3px 10px 5px rgba(0,0,0,0.09);
     box-shadow: 0px -3px 10px 5px rgba(0,0,0,0.09);
     text-align: center;
+    z-index: 99;
+    background: #FFFFFF;
 }
 
 .icon-holder{

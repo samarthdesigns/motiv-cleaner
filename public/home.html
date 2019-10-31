@@ -9,30 +9,59 @@
     <link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
 
     <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
-
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
 </head>
 <body>
 
     <div class="main">
 
-        <div class="bottom-bar">
+        <main id="camera">
 
-            <div class="icon-holder">
+            <!-- Camera sensor -->
+            <canvas id="camera--sensor"></canvas>
+            <!-- Camera view -->
+            <video id="camera--view" autoplay playsinline></video>
+            <!-- Camera output -->
+            <img src="/" alt="" id="camera--output">
+
+        </main>
+
+        <div class="home-holder">
+
+            <h1 align="center">Images</h1>
+
+            <div id="images"></div>
+
+        </div>
+
+        <div class="leader">
+
+                <h1 align="center">Number of Images Clicked</h1>
+    
+                <div id="counterofimages"></div>
+    
+            </div>
+
+    </div>
+
+
+    <div class="bottom-bar">
+
+            <div class="icon-holder" id="home">
                 Home
             </div>
 
             <div class="icon-holder camera-setter">
-                <div class="camera-button"></div>
+                <div class="camera-button" id="camera--trigger">
+                </div>
             </div>
 
-            <div class="icon-holder">
+            <div class="icon-holder" id="leader">
                 Claim
             </div>
 
         </div>
-
-    </div>
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>

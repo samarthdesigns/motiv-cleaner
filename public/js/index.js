@@ -63,7 +63,7 @@ homeTrigger.onclick = function () {
     $('.home-holder').fadeIn();
     images = JSON.parse(localStorage.getItem("Images"));
     var n = Object.keys(images).length;
-    console.log(n);
+    $("#images").empty();
     for (i = 0; i < n; i++) {
         $("#images").append('<img src="'+ images[i].value +'" class="image-setter"/>');
     }
@@ -75,5 +75,6 @@ leaderTrigger.onclick = function () {
     $('.home-holder').fadeOut();
     images = JSON.parse(localStorage.getItem("Images"));
     var n = Object.keys(images).length;
+    $("#counterofimages").empty();
     $("#counterofimages").append('<p align="center">'+ n +'</p>');
 }
